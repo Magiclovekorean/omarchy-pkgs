@@ -19,7 +19,7 @@ pkgdesc='Ubloated fork of omarchy with ergonomic keybinds'
 # boot stack differs per architecture (see depends_x86_64 / depends_aarch64),
 # and makepkg only honours arch-suffixed arrays on arch-specific packages.
 arch=('x86_64' 'aarch64')
-url='https://github.com/Magiclovekorean/ubloarchy'
+url='https://github.com/Magiclovekorean/unbloarchy'
 license=('MIT')
 conflicts=('omarchy-dev')
 # Hard depends: only packages whose removal would brick the desktop. The ISO
@@ -93,7 +93,7 @@ if [[ -n "${OMARCHY_SRC:-}" ]]; then
   source=()
   sha256sums=()
 else
-  source=("omarchy::git+https://github.com/Magiclovekorean/ubloarchy.git#commit=${_commit}")
+  source=("omarchy::git+https://github.com/Magiclovekorean/unbloarchy.git#commit=${_commit}")
   sha256sums=('8371b148aa06e9d0627c9e11668ef2dfdf54c4a9e5ffbee5aee08c3945073618')
 fi
 
