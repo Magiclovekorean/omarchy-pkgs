@@ -8,18 +8,18 @@
 #  - epoch is a manual escape hatch decided by a human; tooling never sets it.
 #  - _commit is the single source of truth for what gets built. _tag is
 #    provenance only (empty when cut from a bare commit). omarchy and
-#    omarchy-settings must always carry identical _tag/_commit/pkgver/sha256sums.
+#    omarchy-settings must always carry identical 12/_commit/pkgver/sha256sums.
 pkgname='omarchy'
 _tag='v4.0.4'
 _commit='c668141e9c42b13c80c9ca4ea108e11708c5e8a5'
 pkgver=4.0.4
 pkgrel=1
-pkgdesc='Beautiful, modern, and opinionated Arch Linux by DHH'
+pkgdesc='Ubloated fork of omarchy with ergonomic keybinds'
 # The payload is architecture-independent, but the dependency set is not: the
 # boot stack differs per architecture (see depends_x86_64 / depends_aarch64),
 # and makepkg only honours arch-suffixed arrays on arch-specific packages.
 arch=('x86_64' 'aarch64')
-url='https://github.com/basecamp/omarchy'
+url='https://github.com/Magiclovekorean/ubloarchy'
 license=('MIT')
 conflicts=('omarchy-dev')
 # Hard depends: only packages whose removal would brick the desktop. The ISO
@@ -93,7 +93,7 @@ if [[ -n "${OMARCHY_SRC:-}" ]]; then
   source=()
   sha256sums=()
 else
-  source=("omarchy::git+https://github.com/basecamp/omarchy.git#commit=${_commit}")
+  source=("omarchy::git+https://github.com/Magiclovekorean/ubloarchy.git#commit=${_commit}")
   sha256sums=('8371b148aa06e9d0627c9e11668ef2dfdf54c4a9e5ffbee5aee08c3945073618')
 fi
 
